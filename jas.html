@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    console.dir(root);
+    console.log(root.children);
+    console.log(root.children[0]);
+    console.dir(root.children[0]);
+    //이거 어차피 문자열 꾸러미 인데 그냥 한번에 변수에다가 저장하면 안돼?
+
+    const textArray = ["안녕하세요 행복한 금요일입니다~~","내일은 토요일이다","모래는 일요일이다","글피는 응ㄹ러러러러러","화요일은 화장품사러간다"];
+
+    document.body.style.width = "100vw";
+    document.body.style.height = "100vh";
+    document.body.style.backgroundColor = "aqua";
+
+
+// 알고리즘 구상  알고리즘 만들건데 클릭할때마다 텍스트가 바뀌면 좋겟어
+//텍스트 목록이 필요할거같다
+// 목록은 배열이 순서대로 쓴다던데
+// 잠깐만 순서는 숫자니까 더하기 1만 시키면 되겠네?
+//어라 숫자는 어떻게 덧셈 시키지?
+//아 숫자 변수 하나 만들어주면 되겟네
+
+
+    let indexValue = 0;
+    document.body.addEventListener('click', function(){
+      if(root.children[0].textContent === ""){
+        root.children[0].textContent = textArray[indexValue];
+      }else{
+        indexValue++;
+        //console.log(indexValue);
+        //숫자 1을 증가시키고 다음 다시 재할당
+        root.children[0].textContent = textArray[indexValue];
+      }
+      if(indexValue === textArray.length) {
+        indexValue = 0;
+      }
+    //root.children[0].textContent = textAray[1];
+    });
+    //문서의 바디부분을 클릭하면 두번쨰 인수로 자리잡혀있는함수내용을 실행시켜줘
+    //함수내용이 뭐냐면 사람들 이거를 알고리즘이라고 부르면 모르겠고
+    
+
+
+
+  </script>
+</body>
+</html>

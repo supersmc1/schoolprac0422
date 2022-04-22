@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="table">
+    <div class="one"></div>
+  </div>
+
+  <script>
+    let table = document.getElementsByClassName("table");
+    console.log(table);
+    // 변수 선언 테이블은 클래스네임 테이블과 같다
+    let one = document.getElementsByClassName("one");
+    // 변수 선언 원 은 클레스 네임 원 과 같다
+    //console.log(table);
+    console.log(one);
+    //확인
+    //console.dir(table);
+    //console.dir(one);
+    //확인
+    let widthValue = 100;
+    //console.log(widthValue);
+    let heightValue = 100;
+    //console.log(heightValue);
+    //변수 지정 위스벨류 헤이트벨류 100 100
+    let display = "flex";
+    let jus = "center";
+    let all = "center";
+    //console.log(display);
+    table[0].style.display = "flex";
+    table[0].style.justibycontent = "center";
+    table[0].style.alignitems = "center";
+    table[0].style.width = `${widthValue}vw`;
+    table[0].style.height = `${heightValue}vh`;
+    
+    
+    
+    
+    
+
+  </script>
+</body>
+</html>
